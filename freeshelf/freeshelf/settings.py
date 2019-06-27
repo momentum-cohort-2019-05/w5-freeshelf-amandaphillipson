@@ -25,12 +25,15 @@ SECRET_KEY = '$ho)a1@e@kv(3bz2l-^waff+nrh_y4p)00h%0=#^_(a)hvf%g#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ? May need to add in the link from something?
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # 'registration' needs to be added to start coding in a way to have multiple users. Must be above djangp.contril.admin
+    # 'registration'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -106,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
@@ -119,3 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())

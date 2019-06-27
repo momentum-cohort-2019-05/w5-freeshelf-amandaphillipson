@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from core.models import Book, Category
+from django.views import generic
 
-# Create your views here.
+
+class BookListView(generic.ListView):
+    model = Book
+
