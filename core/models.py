@@ -22,3 +22,4 @@ class Category(models.Model):
 
 class Favorite(models.Model):
     unique_together = [['book', 'user']]
+

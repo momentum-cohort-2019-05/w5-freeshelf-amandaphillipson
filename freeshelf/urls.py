@@ -18,6 +18,7 @@ from django.urls import path
 
 from . import views 
 
+# urlconfig v
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('',''),
