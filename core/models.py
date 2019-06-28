@@ -20,6 +20,8 @@ class Category(models.Model):
     slug = models.SlugField(max_length=50)
 # each category should have a url that shows books just for that category.
 
-class Favorite(models.Model):
-    unique_together = [['book', 'user']]
+# class Favorite(models.Model):
+#     unique_together = [['book', 'user']]
+#     def __str__(self):
+#     return 'Favorite: {}'.format(self.title)
 
