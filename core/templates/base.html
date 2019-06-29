@@ -1,40 +1,30 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
-<html lang=“en”>
+<html>
 	<head>
 		<title>Free Shelf<title>
 		<meta charset=“utf-8”>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-	* {
-	box-sizing: border-box;
-	margin: ;
-	padding: ;
-}
-    		<link rel=“stylesheet” href=“style.css”>
+    	<link rel=“stylesheet” href=“(% static 'style.css' %}”>
   	</head>  
-<body>
-	<header>
-		<div class="header">
-            <div class="headerName">
-                <h2>
-                    Free Shelf
-                </h2>
-                <h4>
-            		Your online resource for all things Coding
-                </h4>
-            </div>
-	</header>
-	<main>
-	</main>
-	<footer>
-		<nav>
-            <p>
-                /* <a href="???.html">Home</a> */
-                /* <a href="???.html">Books by Category</a> */
-				/* <a href="???.htlm">My Favorites</a> */
-                /* <a href="???.htlm">Login</a> */
-			</p>
-        </nav>
-	</footer>
-</body>
+	<body>
+		<header>
+       		<h2>Free Shelf</h2>
+        	<h4>Your online resource for all things Coding</h4>
+		</header>
+			<div class="wrapper">
+				{% block content %}
+				{% endblock %}
+			</div>
+		<footer>
+			<nav>
+            	<p>
+                	<a href="index.html">Home</a>
+                	<a href="categories.html">Books by Category</a>
+					<a href="favorites.html">My Favorites</a>
+                	<a href="login.html">Login</a>
+				</p>
+        	</nav>
+		</footer>
+	</body>
+</html>

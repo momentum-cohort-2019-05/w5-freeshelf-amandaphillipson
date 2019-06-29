@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.extends',
     'core.apps.CoreConfig',
 ]
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'freeshelf.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +70,7 @@ TEMPLATES = [
             ],
         },
     },
-]
+] 
 
 WSGI_APPLICATION = 'freeshelf.wsgi.application'
 
@@ -126,3 +127,6 @@ STATIC_URL = '/static/'
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
+
+in_production = bool(os.getenv('PRODUCTION'))
+DEBUG = not in_production
