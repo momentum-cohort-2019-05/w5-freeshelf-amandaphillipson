@@ -19,9 +19,10 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', views.index, name='index'),
-    # path('categories/', views.categories, name='categories'),
+    path('', views.index, name='index'),
+    # path('', views.categories, name='categories'),
     # path('my_favorites/', views.favorites, name='favorites'),
     # path('login/', views.login, name='login'),
+
     # path('books/', views.BookListView.as_view(), name='books'),
 ]
