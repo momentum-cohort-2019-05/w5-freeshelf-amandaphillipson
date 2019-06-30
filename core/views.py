@@ -4,15 +4,16 @@ from core.models import Book, Category
 from django.views import generic
 
 # ****************************************
-from django.http import HttpResponse
-
-def index(request):
-    return HttpResponse("Index/Homepage ...This is all I can get... No connection to HTML template... SOS")
-# ****************************************
+# (debug)
 # from django.http import HttpResponse
 
 # def index(request):
-#     return render(request,'index.html')
+#     return HttpResponse("Index/Homepage ...This is all I can get... No connection to HTML template... SOS")
+# ****************************************
+# from django.http import HttpResponse
+
+def index(request):
+    return render(request,'index.html')
 
 # def categories(request):
 #     return render(request,'categories.html')
